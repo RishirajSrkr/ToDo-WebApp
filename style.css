@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Shantell+Sans:wght@300;400;500;600;700&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg:linear-gradient(120deg, #13134E, #1B1A58);
+    --green: #0fd54e;
+    --purple: #bb9eff;
+    --hover: #8d1ce3;
+    --pink: #F87FFF;
+}
+
+body {
+    font-family: 'Shantell Sans', cursive;
+    background:var(--bg);
+    color: white;
+    min-height: 100vh;
+}
+
+header {
+    font-size: 2rem;
+    margin-top: 30px;
+}
+.top-part{
+    display: flex;
+    background-color: white;
+    width: 500px;
+}
+header,
+form {
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form input,
+form button {
+    font-family: 'Shantell Sans', cursive;
+    padding: 0.5rem;
+    font-size: 2rem;
+    border: none;
+    background-color: white;
+}
+
+form input {
+    width: 50%;
+    padding-left: 2rem;
+    flex: 1;
+}
+
+form input:focus {
+    outline: none;
+}
+
+form button {
+    color: var(--purple);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding-right: 1rem;
+}
+
+form button:hover {
+    color: var(--hover);
+
+}
+
+.todo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-list {
+    min-width: 40vw;
+    list-style: none;
+}
+
+
+.todo {
+    margin: 0.5rem;
+    font-size: 1.5rem;
+    /* background-color: var(--lightgreen); */
+    background:linear-gradient(120deg, #27266F, #292873);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+
+.todo:nth-child(2n-1):hover{
+    background: var(--pink);
+    transform: scale(1.05) ;
+    transition: all 0.2s ease;
+}
+
+.todo:nth-child(2n):hover{
+    background: var(--pink);
+    transform: scale(1.05) ;
+    transition: all 0.2s ease;
+}
+
+
+
+.todo li {
+    flex: 1;
+}
+
+.trash-btn,
+.complete-btn {
+    background-color: var(--purple);
+    border: none;
+    color: white;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.complete-btn {
+    background-color: var(--green);
+}
+
+.todo-item {
+    padding: 0rem 1rem;
+    user-select:none;
+}
+
+
+.fa-square-check,
+.fa-trash {
+    pointer-events: none;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.3;
+}
+
+.fall {
+    transform: translateY(8rem);
+    opacity: 0;
+}
+
+
+/* ---styling the filter---- */
+
+select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+    font-family: 'Shantell Sans', cursive;
+    font-size: 1.3rem;
+    
+}
+select{
+    color: var(--purple);
+    width: 15rem;
+    cursor: pointer;
+    padding: 1rem;
+}
+
+.select{
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+.select::after{
+    content: "\25BC";
+    position: absolute;
+    color: var(--purple);
+    top: 0;
+    right: 0;
+    padding: 1.3rem;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.select:hover::after{
+    color: var(--hover);
+}
